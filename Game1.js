@@ -1,4 +1,19 @@
 // script.js
+function createButterfly() {
+    const butterfly = document.createElement('div');
+    butterfly.className = 'butterfly';
+    document.querySelector('.butterflies-container').appendChild(butterfly);
+
+    butterfly.style.left = `${Math.random() * window.innerWidth}px`;
+    butterfly.style.top = `${Math.random() * window.innerHeight}px`;
+
+    butterfly.addEventListener('animationiteration', () => {
+        butterfly.style.left = `${Math.random() * window.innerWidth}px`;
+        butterfly.style.top = `${Math.random() * window.innerHeight}px`;
+    });
+}
+
+setInterval(createButterfly, 3000); // Create a butterfly every 3 seconds
 let images = [];
 let names = {};
 

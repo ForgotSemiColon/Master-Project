@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Matching Game</title>
+    <link rel="stylesheet" href="Game3.css">
+</head>
+<body>
+    <div id="bckgrd"></div>
+
+
+    <h1>Color Matching Game</h1>
+    <p>Drag and drop the colored shapes into the shapes with color names!</p>
+    <div class="container">
+        <div class="color-shape red" draggable="true" data-color="red"></div>
+        <div class="color-shape green" draggable="true" data-color="green"></div>
+        <div class="color-shape blue" draggable="true" data-color="blue"></div>
+        <div class="color-shape yellow" draggable="true" data-color="yellow"></div>
+        <div class="color-shape purple" draggable="true" data-color="purple"></div>
+        <div class="color-shape orange" draggable="true" data-color="orange"></div>
+    </div>
+    <div class="target">
+        <div class="color-name-target rred" data-color="red">Red</div>
+        <div class="color-name-target ggreen" data-color="green">Green</div>
+        <div class="color-name-target bblue" data-color="blue">Blue</div>
+        <div class="color-name-target yyellow" data-color="yellow">Yellow</div>
+        <div class="color-name-target ppurple" data-color="purple">Purple</div>
+        <div class="color-name-target oorange" data-color="orange">Orange</div>
+    </div>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <p id="popup-message"></p>
+        <button id="close-popup">Close</button>
+    </div>
+</div>
+    <script src="Game3.js"></script>
+</body>
+</html>

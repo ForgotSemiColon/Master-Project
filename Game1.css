@@ -45,6 +45,6 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    display: none; /* Initially hide the popup */
-    z-index: 9999; /* Ensure the popup appears above other content */
+    display: none; 
+    z-index: 9999; 
 }
