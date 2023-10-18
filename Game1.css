@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #b295f1;
 }
 
 .game-container {
@@ -47,4 +48,20 @@ body {
     text-align: center;
     display: none; 
     z-index: 9999; 
+}
+.buttonfart {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Additional styles to improve button visibility */
+.buttonfart:hover {
+    background: #0056b3;
 }

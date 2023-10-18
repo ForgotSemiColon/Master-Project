@@ -11,7 +11,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #5bf3b1;
+  background: #8ac5ef;
 }
 .container{
   width: 440px;
@@ -252,4 +252,20 @@ body{
     width: calc(100% / 2 - 7px);
   }
 }
+}
+.buttonfart {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Additional styles to improve button visibility */
+.buttonfart:hover {
+  background: #0056b3;
 }

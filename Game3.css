@@ -1,16 +1,47 @@
-
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
 body {
     font-family: fantasy;
+    box-shadow: 0, 0 , 0.0 rgba(0, 0, 0, 0.6);
     text-align: center;
-    background-image: url('https://openai-labs-public-images-prod.azureedge.net/user-dJ0n66zMOERstAosDGdyUup1/generations/generation-gajPLuilaSNultKieeRmz954/image.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #bbbbf7;
 }
 h1 {
-font-size: 40px;
-}
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 50px;
+    justify-content: center;
+    font-size:35px;
+    background-color: #8ac5ef;
+    width: 500px;
+    height: 100px;
+    display: inline-block;
+    color: #fff;
+    animation: floatUpDown 3s infinite;
+  }
+
+  @keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
+  }
 p {
-    font-size: 20px;
+    font-size: xx-large;
+    font-family: 'DM Sans', sans-serif;
+    justify-content: center;
+    align-content: center;
+
 }
 .container {
     display: flex;
@@ -30,10 +61,12 @@ p {
 .red {
     background-color: red;
     border-radius: 50%;
+    
 }
 .green {
     background-color: green;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    
 }
 .blue {
     background-color: blue;
@@ -51,6 +84,13 @@ p {
     background-color: orange;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
+.red, .green, .blue, .yellow, .purple, .orange {
+    animation: floatUpDown 3s infinite;
+
+}
+
+
+
 .color-name-target {
     width: 100px;
     height: 100px;
@@ -63,6 +103,7 @@ p {
 .rred {
     background-color: #4a4a4b;
     border-radius: 50%;
+    
 }
 .ggreen {
     background-color: #4a4a4b;
@@ -91,22 +132,13 @@ p {
     text-align: center;
     width: 150px; /* Set the width */
     height: 150px; /* Set the height */
-    transform: translateY(100%);
+    transform: translateY(50px);
     margin: 0 10px; /* Add margin to create spacing between shapes */
-    animation: floatUpDown 3s infinite;
-    top: 0%; /* Initial vertical position */
-    left: 50%; /* Initial horizontal position */
-    transform: translate(0%, -50%); /* Center it in the viewport */
+    position:relative;
+    justify-items: center;    
 }
 
-@keyframes floatUpDown {
-    0%, 100% {
-        transform: translateY(20px);
-    }
-    50% {
-        transform: translateY(50px); /* Adjust the float height as needed */
-    }
-}
+
 
 
 .color-shape:hover {
@@ -144,13 +176,34 @@ p {
     cursor: pointer;
 }
 body{
-
-background-image: url('https://c4.wallpaperflare.com/wallpaper/816/532/887/the-garden-of-words-anime-animation-ripples-wallpaper-preview.jpg');
 background-repeat: no-repeat;
-background-size:cover ;
-animation: mymove 3s infinite;
+background-size:cover;
+animation: mymove 10s infinite;
 }
-@keyframes mymove {
-from {background-image: url('https://c4.wallpaperflare.com/wallpaper/15/759/615/the-wind-rises-hayao-miyazaki-anime-movie-scenes-japanese-garden-hd-wallpaper-preview.jpg');}
-to {background-image: url('https://c4.wallpaperflare.com/wallpaper/371/696/928/anime-arrietty-artwork-boys-wallpaper-preview.jpg');}
+
+
+/* animation for floating effect */
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Adjust the float height as needed */
+    }
+}
+.buttonfart {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Additional styles to improve button visibility */
+.buttonfart:hover {
+    background: #0056b3;
 }
