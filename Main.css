@@ -27,7 +27,7 @@ header {
     margin-top: 10px;
     margin-bottom: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    animation: floatUpDown 3s infinite;
+    animation: floatUpDown2 3s infinite;
 }
 
 header h1 {
@@ -41,21 +41,18 @@ nav ul {
     background-color: #b295f1;
     text-align: center;
     justify-content: center;
-   
-   
+    height: 100px
 }
 
 nav ul li {
-    display: inline;
+    display: flex;
     margin: 0 20px;
-    
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-   
 }
 
 main {
@@ -70,21 +67,6 @@ footer {
     bottom: 0;
     width: 100%;
     color: #fff;
-}
-
-
-li2{
-    font-family: fantasy;
-    font-size: x-large; 
-    
-}
-li3{
-    font-family: fantasy;
-    font-size: x-large;
-}
-li4{
-    font-family: fantasy;
-    font-size: x-large;
 }
 
 
@@ -180,7 +162,7 @@ li4{
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
-    animation: floatUpDown 3s infinite;
+    animation: floatUpDown1 3s infinite;
 }
 
 
@@ -239,7 +221,15 @@ li4{
 /* floating textbox */
 
 
-@keyframes floatUpDown {
+@keyframes floatUpDown1 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px); /* Adjust the float height as needed */
+    }
+}
+@keyframes floatUpDown2 {
     0%, 100% {
         transform: translateY(0);
     }
@@ -247,6 +237,15 @@ li4{
         transform: translateY(-5px); /* Adjust the float height as needed */
     }
 }
+@keyframes floatUpDown3 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Adjust the float height as needed */
+    }
+}
+
 
 /* design and hover for 3 columns */
 .container {
@@ -267,11 +266,15 @@ li4{
     border-radius: 50px;
     text-align: center;
     justify-content: center;
-    animation: floatUpDown 5s infinite;
+    animation: floatUpDown3 5s infinite;
 }
 
 
 .column:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 255);
     transform: scale(1.05); /* Add a scaling effect on hover */
+}
+.dropbtn {
+    display: inline-block;
+
 }
