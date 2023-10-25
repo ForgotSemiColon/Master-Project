@@ -6,7 +6,7 @@ html, body {
   background-repeat: no-repeat;
 }
 canvas {
-  display: block;
+  display: flex;
 }
 h1 {
   background-color: #8ac5ef;
@@ -34,15 +34,15 @@ h1 {
   }
 }
 .buttonfart{
-  bottom: 10px;
-  left: 10px;
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-
+  position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 .container {
   display: flex;
@@ -81,28 +81,38 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  margin: 0 auto; /* Center the container horizontally */
-  max-width: 800px; /* Limit the container width */
+  margin: auto; /* Center the container horizontally */ /* Limit the container width */
   display:grid;
-  grid-template-columns: repeat(3,1fr);
-  gap:10px;
-  transform: translateX(400px);
+  transform: translateX(90px);
+  width: 800px;
 }
 
 .container5 {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  margin: 0 auto; /* Center the container horizontally */
-  max-width: 800px; /* Limit the container width */
+  margin: 0 auto; /* Center the container horizontally *//* Limit the container width */
   display:grid;
   grid-template-columns: repeat(3,1fr);
   gap:10px;
-  transform: translateX(400px);
+  transform: translateX(100px);
 }
 
 
 .column2:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 255);
   transform: scale(1.05); /* Add a scaling effect on hover */
+}
+
+.column2 {
+  flex: 1;
+  padding: 20px;
+  background-color:gold ;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 255);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 0 10px; /* Add spacing between columns */
+  border-radius: 50px;
+  text-align: center;
+  justify-content: center;
+  animation: floatUpDown3 5s infinite;
 }
