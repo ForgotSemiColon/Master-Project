@@ -7,13 +7,17 @@
         
     </title>
     <link rel="stylesheet" href="Game3.css">
+    <div class="timer-container">
+        <div id="timer" class="timer">Time: 0 seconds</div>
+    </div>
 </head>
 <body>
     <div id="bckgrd"></div>
     <div class=shape></div>
 
-
-    <h1>Color Matching Game</h1>
+<header>
+    <h1 class="PPAP">Color Matching Game</h1>
+</header>
     <p>  Drag and drop the colored shapes into the shapes with color names!</p>
     <div class="container">  
         <div class="color-shape red" draggable="true" data-color="red"></div>
@@ -24,22 +28,35 @@
         <div class="color-shape orange" draggable="true" data-color="orange"></div> 
     </div>
     <div class="target">
-        <div  class="color-name-target rred" data-color="red">Red</div>
-        <div class="color-name-target ggreen" data-color="green">Green</div>
-        <div class="color-name-target bblue" data-color="blue">Blue</div>
-        <div class="color-name-target yyellow" data-color="yellow">Yellow</div>
-        <div class="color-name-target ppurple" data-color="purple">Purple</div>
-        <div class="color-name-target oorange" data-color="orange">Orange</div>
+        <div  class="color-name-target rred" data-color="red"><span>Red</span></div>
+        <div class="color-name-target ggreen" data-color="green"><span>Green</span></div>
+        <div class="color-name-target bblue" data-color="blue"><span>Blue</span></div>
+        <div class="color-name-target yyellow" data-color="yellow"><span>Yellow</span></div>
+        <div class="color-name-target ppurple" data-color="purple"><span>Purple</span></div>
+        <div class="color-name-target oorange" data-color="orange"><span>Orange</span></div>
     </div>
 <div id="popup" class="popup">
     <div class="popup-content">
         <p id="popup-message"></p>
+        <p id="popup-time"></p> 
         <button id="close-popup">Close</button>
+        <button id="close-popup" onclick="location.reload();">Restart</button>
     </div>
 </div>
     <script src="Game3.js"></script>
     <a href="Main.html">
         <button class="buttonfart">Go Back to Main</button>
     </a>
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>Correct Answer Sound Effect</title>
+    </head>
+    <body>
+        <audio id = "correctSound" src = "sounds/RZFWLXE-bell-hop-bell.mp3" autoplay></audio>
+            </body>
+            </html>
 </body>
 </html>

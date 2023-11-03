@@ -1,26 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
 body {
-    font-family: fantasy;
+    font-family: Arial, sans-serif;
     box-shadow: 0, 0 , 0.0 rgba(0, 0, 0, 0.6);
     text-align: center;
     background-image: url('https://th.bing.com/th/id/OIG.I92AE0R8XI0yqM8W0k1B?pid=ImgGn');
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-position: 30%;
 }
-h1 {
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    border-radius: 50px;
-    justify-content: center;
-    font-size:35px;
+header {
     background-color: #8ac5ef;
-    width: 500px;
-    height: 100px;
-    display: inline-block;
-    color: #fff;
-    animation: floatUpDown 3s infinite;
-  }
+    font-size: small;
+    padding: 10px;
+    font-family: fantasy;
+    border-radius: 50px;
+    height: 80px;
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    animation: floatUpDown2 3s infinite;
+    text-justify: auto;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    justify-content: center;
+}
+
 
   @keyframes flicker {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
@@ -67,41 +76,44 @@ p {
 }
 .green {
     background-color: green;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border-radius: 50%;
     
 }
 .blue {
     background-color: blue;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    width: 250px;
+    height: 150px;
 }
 .yellow {
     background-color: yellow;
-    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+    width: 250px;
+    height: 150px;
 }
 .purple {
     background-color: purple;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    width: 150px;
+    height: 150px;
 }
 .orange {
     background-color: orange;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    width: 150px;
+    height: 150px;
 }
 .red, .green, .blue, .yellow, .purple, .orange {
     animation: floatUpDown 3s infinite;
 
 }
-
-
-
 .color-name-target {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin: 10px;
-    border: 2px solid #4a4a4b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: border 0.3s;
+    transform: translateY(20%);
+    display: inline-block;
 }
+
 .rred {
     background-color: #4a4a4b;
     border-radius: 50%;
@@ -109,40 +121,28 @@ p {
 }
 .ggreen {
     background-color: #4a4a4b;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border-radius: 50%;
 }
 .bblue {
     background-color: #4a4a4b;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    width: 250px;
+    height: 150px;
 }
 .yyellow {
     background-color: #4a4a4b;
-    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+    width: 250px;
+    height: 150px;
 }
 .ppurple {
     background-color:#4a4a4b;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    width: 150px;
+    height: 150px;
 }
 .oorange {
     background-color: #4a4a4b;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    width: 150px;
+    height: 150px;
 }
-.rred, .ggreen, .bblue, .yyellow, .ppurple, .oorange {
-    display: inline-table; /* Change display to inline-block */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 150px; /* Set the width */
-    height: 150px; /* Set the height */
-    transform: translateY(50px);
-    margin: 0 10px; /* Add margin to create spacing between shapes */
-    position:relative;
-    justify-items: center;    
-}
-
-
-
-
 .color-shape:hover {
     border: 2px dashed black; 
 }
@@ -209,3 +209,17 @@ animation: mymove 10s infinite;
 .buttonfart:hover {
     background: #0056b3;
 }
+/* Add your preferred styles for the timer component */
+.timer-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .timer {
+    font-size: 24px;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #888;
+  }
