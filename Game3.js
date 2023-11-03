@@ -88,11 +88,17 @@ document.addEventListener('DOMContentLoaded', function () {
       if (draggedShape.dataset.color === this.dataset.color) {
         this.style.background = draggedShape.style.background;
         draggedShape.style.visibility = 'hidden';
-        playCorrectSound(); // Call the function to play the sound
+        this.classList.add('correct-match');
+        playCorrectSound(); 
         checkGameEnd();
       }
     }
-    
+    function resetBackgroundColor() {
+      colorNameTargets.forEach(target => {
+          target.style.background = ''; 
+          target.classList.remove('correct-match');
+      });
+  }
     function checkGameEnd() {
         const allTargets = document.querySelectorAll('.color-name-target');
         const matchedTargets = document.querySelectorAll('.color-name-target[style*="background"]');
@@ -106,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
             showMessage('Game Over! All shapes are correctly matched.');
             stopTimer();
             restartButton.style.display = 'block';
+            resetBackgroundColor();
       }
     }
     function playCorrectSound() {

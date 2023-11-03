@@ -109,37 +109,43 @@ p {
     margin: 10px;
     cursor: pointer;
     border: 2px solid black;
-    transition: border 0.3s;
     transform: translateY(20%);
     display: inline-block;
+    text-align: center;
 }
-
+.color-name-target span {
+    display: inline-block;
+    margin-top: 65px;
+}
+.correct-match {
+    background-color: #4a4a4b !important;
+}
 .rred {
-    background-color: #4a4a4b;
+    background-color: white;
     border-radius: 50%;
     
 }
 .ggreen {
-    background-color: #4a4a4b;
+    background-color: white;
     border-radius: 50%;
 }
 .bblue {
-    background-color: #4a4a4b;
+    background-color: white;
     width: 250px;
     height: 150px;
 }
 .yyellow {
-    background-color: #4a4a4b;
+    background-color: white;
     width: 250px;
     height: 150px;
 }
 .ppurple {
-    background-color:#4a4a4b;
+    background-color:white;
     width: 150px;
     height: 150px;
 }
 .oorange {
-    background-color: #4a4a4b;
+    background-color: white;
     width: 150px;
     height: 150px;
 }
@@ -182,15 +188,12 @@ background-repeat: no-repeat;
 background-size:cover;
 animation: mymove 10s infinite;
 }
-
-
-/* animation for floating effect */
 @keyframes floatUpDown {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px); /* Adjust the float height as needed */
+        transform: translateY(-20px); 
     }
 }
 .buttonfart {
@@ -205,11 +208,9 @@ animation: mymove 10s infinite;
     cursor: pointer;
 }
 
-/* Additional styles to improve button visibility */
 .buttonfart:hover {
     background: #0056b3;
 }
-/* Add your preferred styles for the timer component */
 .timer-container {
     text-align: center;
     margin: 20px;
