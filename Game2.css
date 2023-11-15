@@ -18,14 +18,15 @@ body{
 .container{
   width: 440px;
   border-radius: 7px;
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  background: rgb(246, 201, 209);
+  box-shadow: 0px 0px 50px #8ac5ef;
+  border: 5px solid #8ac5ef;
 }
 .container h2{
   font-size: 25px;
   font-weight: 500;
   padding: 16px 25px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 5px solid #8ac5ef;
 }
 .container .content{
   margin: 25px 20px 35px;
@@ -57,7 +58,7 @@ body{
   padding: 0 16px;
   font-size: 18px;
   border-radius: 5px;
-  border: 1px solid #bfbfbf;
+  border: 1px solid pink;
 }
 .content input:focus{
   box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
@@ -145,7 +146,7 @@ body{
 .container{
   width: 440px;
   border-radius: 7px;
-  background: #fff;
+  background: pink;
   box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 .container h2{
@@ -184,16 +185,16 @@ body{
   padding: 0 16px;
   font-size: 18px;
   border-radius: 5px;
-  border: 1px solid #bfbfbf;
+  border: 1px solid pink;
 }
 .content input:focus{
   box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
 }
 .content input::placeholder{
-  color: #aaa;
+  color: pink;
 }
 .content input:focus::placeholder{
-  color: #bfbfbf;
+  color: pink;
 }
 .content .buttons{
   display: flex;
@@ -270,4 +271,22 @@ body{
 /* Additional styles to improve button visibility */
 .buttonfart:hover {
   background: #0056b3;
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-130px, -350px);
+  background-color: rgba(255, 255, 255, 0.265);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: none; 
+  z-index: 9999;
+}
+.score {
+  margin-top: 30px;
+}
+#yourScoreId {
+  margin-top: 30px;
 }

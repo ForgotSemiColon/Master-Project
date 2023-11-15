@@ -1,28 +1,8 @@
 // script.js
-function createButterfly() {
-    const butterfly = document.createElement('div');
-    butterfly.className = 'butterfly';
-    document.querySelector('.butterflies-container').appendChild(butterfly);
-
-    butterfly.style.left = `${Math.random() * window.innerWidth}px`;
-    butterfly.style.top = `${Math.random() * window.innerHeight}px`;
-
-    butterfly.addEventListener('animationiteration', () => {
-        butterfly.style.left = `${Math.random() * window.innerWidth}px`;
-        butterfly.style.top = `${Math.random() * window.innerHeight}px`;
-    });
-}
-
-setInterval(createButterfly, 3000); // Create a butterfly every 3 seconds
 let images = [];
 let names = {};
-
-function shuffleImages() {
-    for (let i = images.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [images[i], images[j]] = [images[j], images[i]];
-    }
-}
+let correctCount = 0;
+let wrongCount = 0;
 
 fetch('names.txt')
     .then(response => response.text())
@@ -33,18 +13,17 @@ fetch('names.txt')
             names[nameKey] = nameValue;
         });
 
+        // Generate image URLs based on shuffled indices
         for (let i = 1; i <= 6; i++) {
             images.push(`images/face${i}.png`);
         }
-
-        shuffleImages();
-
-        const shuffledNames = Object.values(names);
-        shuffleArray(shuffledNames);
-
+        // Display the first image and associated shuffled names
         displayImage(0);
         const optionsContainer = document.getElementById('options');
-        shuffledNames.forEach(name => {
+        images.forEach((image, index) => {
+            const nameKey = `name${index + 1}`;
+            const name = names[nameKey];
+
             const button = document.createElement('button');
             button.textContent = name;
             button.addEventListener('click', () => checkAnswer(name));
@@ -52,13 +31,6 @@ fetch('names.txt')
         });
     })
     .catch(error => console.error(error));
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
 
 function displayImage(index) {
     const imageElement = document.getElementById('image');
@@ -80,25 +52,54 @@ function hidePopup() {
 function checkAnswer(selectedName) {
     const expectedName = names[`name${currentIndex + 1}`];
 
+    console.log("Selected Name:", selectedName);
+    console.log("Expected Name:", expectedName);
+
     if (selectedName === expectedName) {
         showPopup('Correct!');
+        correctCount++;
     } else {
         showPopup('Wrong!');
+        wrongCount++;
     }
-
-    setTimeout(hidePopup, 2000);
+    updateCountElements();
+    setTimeout(hidePopup, 1000);
 
     currentIndex++;
     if (currentIndex < images.length) {
         displayImage(currentIndex);
     } else {
-        alert('Game Over!');
+        showPopup('Game Over!');
     }
 }
+function updateCountElements() {
+    const correctCountElement = document.getElementById('correctCount');
+    const wrongCountElement = document.getElementById('wrongCount');
+
+    correctCountElement.textContent = `Correct: ${correctCount}`;
+    wrongCountElement.textContent = `Wrong: ${wrongCount}`;
+}
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+function shuffleOptions() {
+    const optionsContainer = document.getElementById("options");
+    const options = Array.from(optionsContainer.children);
+    shuffleArray(options);
+
+    options.forEach(option => {
+        optionsContainer.appendChild(option);
+    });
+}
+
+window.onload = shuffleOptions;
 
 let currentIndex = 0;
 
 window.addEventListener('load', () => {
-    shuffleImages();
-    displayImage(0);
+    currentIndex = 0;
 });
+window.onload = shuffleOptions;

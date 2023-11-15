@@ -16,16 +16,15 @@ body {
 .image-container {
     max-width: 700px;
     margin-top: 20px;
-    border: 5px solid #625b5b;
+    border: 5px solid #8ac5ef;
     padding: 10px;
     border-radius: 20px;
-    background-color: #94ebb1;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: pink;
+    box-shadow: 0px 0px 50px #8ac5ef;
 }
-
 .image-container img {
-    max-width: 100%;
-    height: auto;
+    height: 500px;
+    width: auto;
     display: block;
     margin: 0 auto;
 }
@@ -38,6 +37,9 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: pink;
+    border-color: #8ac5ef;
+    border-radius: 10px;
 }
 .popup {
     position: fixed;
@@ -62,8 +64,14 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
-/* Additional styles to improve button visibility */
 .buttonfart:hover {
     background: #0056b3;
+}
+#correctCount, #wrongCount {
+    border: 5px solid #8ac5ef;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    background-color: pink;
+    border-radius: 10px;
 }

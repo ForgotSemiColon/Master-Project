@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url('https://th.bing.com/th/id/OIG.I92AE0R8XI0yqM8W0k1B?pid=ImgGn');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .buttonfart {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+}
+      .buttonfart:hover {
+      background: #0056b3;
+}
+    </style>
+  </head>
+  <body>
+    <script> 
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+  textSize(32);
+  
+  fill('#9DE2AA');
+  rect(windowWidth/2.7,windowHeight-(windowHeight/1.1),370,90,20);
+  fill('#F8EC8F')
+  textSize(45)
+  text("OUR MISSION",windowWidth/2.3,windowHeight-(windowHeight/1.22));
+  
+  textSize(20);
+  fill('black');
+  textFont('Amatic SC')
+  text(" 1) Our mission with this assignment is to help the elderly suffering with dementia to find a way to improve their condition via daily usage of our games to train",0,windowHeight-(windowHeight/1.5))
+  text("    and challenge their brain. ",0,windowHeight-(windowHeight/1.6));
+  
+  
+  
+  textSize(20);
+  fill('black');
+  text(" 2) Our Games help the user to develop the skills of Cognitive Stimulation, Task Management, Sensory Stimulation etc.",0,windowHeight-(windowHeight/1.8));
+
+  textSize(20);
+  fill('black');
+  text(" 3)  Rearrange The Seeds:- This Game shows the user a picture of their family members and displays them different names out of which they have to identify",0,windowHeight-(windowHeight/2));
+  text("     and click on the name of what family member is being displayed. This game helps the user to refine his/her memory skills",0,windowHeight-(windowHeight/2.2));
+
+  textSize(20);
+  fill('black');
+  text(" 4)  Know Thy Self:- This game asks the user to drag and drop shapes into their respective molds. This game would implement visual feedback because ",0,windowHeight-(windowHeight/2.6));
+  text("     we would implement visuals of a hole without a shape and a shape with color for the user to match. It is a mouse movement type of game, and we use the mouse to manipulate objects",0,windowHeight-(windowHeight/2.9));
+  
+  textSize(20);
+  fill('black');
+  text(" 5)  Remember Your Poison:- This game gives the user a random list of letters that form a word and by the use of them he/she has to decode the random",0,windowHeight-(windowHeight/3.6));
+  text("     generated list of letters to form the correct word . This game will implement mouse movements. The feedback returned will be visual as the letters" ,0,windowHeight-(windowHeight/4.2));
+  text("     will form the word on the screen and will be outlined in green to show the user they got the correct answer.",0,windowHeight-(windowHeight/4.9));
+}
+    </script>
+    <a href="Main.html">
+      <button class="buttonfart">Go Back to Main</button>
+  </a>
+  </body>
+</html>
