@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+    <h2 id="question">Question goes here</h2>
+    <input type="text" id="answer" placeholder="Your Answer">
+    <button id="submitBtn">Submit Answer</button>
+    <button id="nextBtn">Next Question</button>
+    <p id="result">Answer</p>
+    <p id="score">Correct: 0</p>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('https://th.bing.com/th/id/OIG.I92AE0R8XI0yqM8W0k1B?pid=ImgGn');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    </style>
+    <script>
+        let score = 0;
+        let currentQuestion = 0;
+        let questions = [
+            { question: "How many oceans are there?", answer: "7" },
+            { question: "What is the biggest ocean on Earth?", answer: "Pacific" },
+            { question: "Which is the largest animal on Earth?", answer: "Blue Whale" },
+            { question: "What’s the fastest land animal in the world?", answer: "The cheetah" },
+            { question: "How many eyes does a bee have?", answer: "Five" },
+            // ... (add the rest of the questions)
+        ];
+
+        function setup() {
+            noCanvas();
+            displayQuestion();
+
+            const submitButton = document.getElementById("submitBtn");
+            submitButton.addEventListener("click", checkAnswer);
+
+            const nextButton = document.getElementById("nextBtn");
+            nextButton.addEventListener("click", moveToNextQuestion);
+        }
+
+        function displayQuestion() {
+            document.getElementById("question").textContent = questions[currentQuestion].question;
+            document.getElementById("answer").value = "";
+            document.getElementById("result").textContent = "Answer";
+        }
+
+        function displayCorrectAnswer() {
+            document.getElementById("result").textContent = "Correct!";
+            console.log("Correct");
+            const correctCountElement = document.getElementById('score');
+    correctCountElement.textContent = `Correct: ${score}`;
+        }
+
+        function displayWrongAnswer() {
+            const correctAnswer = questions[currentQuestion].answer.toLowerCase();
+            document.getElementById("result").textContent = "Incorrect. The correct answer is: " + correctAnswer;
+            console.log("Incorrect. The correct answer is: " + correctAnswer);
+        }
+
+        function checkAnswer() {
+            console.log("checkAnswer() function is called");
+            const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
+            const correctAnswer = questions[currentQuestion].answer.toLowerCase();
+
+            if (userAnswer === correctAnswer) {
+                displayCorrectAnswer();
+                score++;
+                updateCountElements();
+            } else {
+                displayWrongAnswer();
+            }
+        }
+        function updateCountElements() {
+    const correctCountElement = document.getElementById('score');
+    correctCountElement.textContent = `Correct: ${score}`;
+}
+        function moveToNextQuestion() {
+            // Move to the next question or end the game
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                displayQuestion();
+            } else {
+                document.getElementById("question").textContent = "Trivia Game Complete!";
+                document.getElementById("answer").style.display = "none";
+                document.getElementById("result").style.display = "none";
+                document.getElementById("nextBtn").style.display = "none";
+            }
+        }
+
+        // Call setup once
+        setup();
+    </script>
+</body>
+</html>

@@ -253,12 +253,13 @@ footer {
     justify-content: space-between;
     padding: 20px;
     margin: 0 auto; /* Center the container horizontally */
-    max-width: 800px; /* Limit the container width */
+    max-width: auto; /* Limit the container width */
 }
 
 .column {
     flex: 1;
-    padding: 20px;
+    padding: 40px;
+    padding-bottom: 40px;
     background-color:gold ;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 255);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -267,6 +268,7 @@ footer {
     text-align: center;
     justify-content: center;
     animation: floatUpDown3 5s infinite;
+    
 }
 
 
