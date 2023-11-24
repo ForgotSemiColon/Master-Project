@@ -6,12 +6,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
 <body>
-    <h2 id="question">Question goes here</h2>
+    <h1>Riddle Rumble </h1>
+    <div class="container">
+    <h2 id="question">Question Goes Here</h2>
     <input type="text" id="answer" placeholder="Your Answer">
     <button id="submitBtn">Submit Answer</button>
     <button id="nextBtn">Next Question</button>
     <p id="result">Answer</p>
     <p id="score">Correct: 0</p>
+</div>
     <style>
         body {
     font-family: Arial, sans-serif;
@@ -20,6 +23,59 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+   .container {
+  width: 500px;
+  height: 250px;
+  border-radius: 50px;
+  background: rgb(246, 201, 209);
+  box-shadow: 0px 0px 50px #8ac5ef;
+  border: 5px solid #8ac5ef;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+margin-left: 35%;
+padding-top: 60px;
+   }
+   h1{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 500px; /* Set the width of the box as per your requirement */
+  height: 100px; /* Set the height of the box as per your requirement */
+  background-color: #3498db; /* Set the background color */
+  border-radius: 25px; /* Set half of the height for a pill-shaped border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 35%;
+text-align: center;
+animation: glowing 1s infinite; 
+   }
+
+   @keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #8ac5ef;
+  }
+  50% {
+    box-shadow: 0 0 20px #8ac5ef, 0 0 30px #8ac5ef;
+  }
+  100% {
+    box-shadow: 0 0 5px #8ac5ef;
+  }
+}
+
+.buttonfart {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
     </style>
     <script>
         let score = 0;
@@ -96,5 +152,9 @@
         // Call setup once
         setup();
     </script>
+
+     <a href="Main.html">
+        <button class="buttonfart">Go Back to Main</button>
+    </a>
 </body>
 </html>
