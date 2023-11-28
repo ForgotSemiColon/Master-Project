@@ -29,7 +29,7 @@
 }
 #result{
     border-radius: 10px;
-  background: rgb(246, 201, 209);
+  background: rgb(201, 217, 246);
   box-shadow: 0px 0px 50px #8ac5ef;
   border: 5px solid #8ac5ef;
   margin-top: 10px;
@@ -39,7 +39,7 @@ padding-top: 5px;
     margin-left: 180px;
     width: 100px;
     border-radius: 10px;
-  background: rgb(246, 201, 209);
+  background: rgb(201, 217, 246);
   box-shadow: 0px 0px 50px #8ac5ef;
   border: 5px solid #8ac5ef;
   margin-top: 10px;
@@ -47,6 +47,7 @@ padding-top: 5px;
 }
 
    .container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
   width: 500px;
   height: 350px;
   border-radius: 50px;
@@ -58,8 +59,11 @@ padding-top: 5px;
   margin-top: 15%;
 margin-left: 35%;
 padding-top: 60px;
+animation: floatUpDown 3s infinite; 
+
    }
    h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 50px;
     display: flex;
   justify-content: center;
@@ -73,6 +77,8 @@ padding-top: 60px;
   margin-left: 35%;
 text-align: center;
 animation: glowing 1s infinite; 
+animation: floatUpDown 1s infinite; 
+
    }
 
    @keyframes glowing {
@@ -98,6 +104,18 @@ animation: glowing 1s infinite;
     border-radius: 5px;
     cursor: pointer;
 }
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the float height as needed */
+    }
+}
+
+
+
 
 
     </style>
