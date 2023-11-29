@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
+
+.PPAP{
+font-size: xx-large;
+font-family: Georgia, 'Times New Roman', Times, serif;
+animation: floatSide 3s infinite; 
+}
+.intro_card{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ 
+ font-size: 30px;
+  box-shadow: 0px 0px 50px rgb(203, 201, 246);
+
+}
 body {
     font-family: Arial, sans-serif;
     box-shadow: 0, 0 , 0.0 rgba(0, 0, 0, 0.6);
@@ -12,9 +25,8 @@ body {
 }
 header {
     background-color: #8ac5ef;
-    font-size: small;
     padding: 10px;
-    font-family: fantasy;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 50px;
     height: 80px;
     width: 300px;
@@ -72,37 +84,38 @@ p {
 .red {
     background-color: red;
     border-radius: 50%;
-    
+    animation: floatUpDown 3.4s infinite;
 }
 .green {
     background-color: green;
     border-radius: 50%;
-    
+    animation: floatUpDown 3.1s infinite;
 }
 .blue {
     background-color: blue;
     width: 250px;
     height: 150px;
+    animation: floatUpDown 3.6s infinite;
 }
 .yellow {
     background-color: yellow;
     width: 250px;
     height: 150px;
+    animation: floatUpDown 3.2s infinite;
 }
 .purple {
     background-color: purple;
     width: 150px;
     height: 150px;
+    animation: floatUpDown 3.5s infinite;
 }
 .orange {
     background-color: orange;
     width: 150px;
     height: 150px;
+    animation: floatUpDown 3.3s infinite;
 }
-.red, .green, .blue, .yellow, .purple, .orange {
-    animation: floatUpDown 3s infinite;
 
-}
 .color-name-target {
     width: 150px;
     height: 150px;
@@ -196,6 +209,22 @@ animation: mymove 10s infinite;
         transform: translateY(-20px); 
     }
 }
+
+@keyframes floatSide {
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+}
+
+
+  100% {
+      transform: translateX(-15px); 
+  }
+}
+
+
 .buttonfart {
     position: fixed;
     bottom: 10px;
@@ -217,9 +246,10 @@ animation: mymove 10s infinite;
   }
   
   .timer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 24px;
     color: #333;
-    background-color: #f0f0f0;
+    background-color:pink;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 2px 2px 4px #888;
