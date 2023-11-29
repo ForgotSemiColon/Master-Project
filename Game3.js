@@ -111,6 +111,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (hiddenShapes.length === allTargets.length) {
             showMessage('Game Over! All shapes are correctly matched.');
             stopTimer();
+            var audio = document.getElementById('audio');
+            audio.play('audio');
             restartButton.style.display = 'block';
             resetBackgroundColor();
       }
